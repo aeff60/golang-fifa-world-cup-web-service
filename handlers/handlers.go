@@ -45,7 +45,7 @@ func AddNewWinner(res http.ResponseWriter, req *http.Request) {
 		res.WriteHeader(http.StatusUnauthorized)
 
 	} else {
-		res.WriteHeader(http.StatusCreated)
+
 		err := data.AddNewWinner(req.Body)
 		if err != nil {
 			res.WriteHeader(http.StatusUnprocessableEntity) //422
