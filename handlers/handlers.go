@@ -51,6 +51,7 @@ func AddNewWinner(res http.ResponseWriter, req *http.Request) {
 			res.WriteHeader(http.StatusUnprocessableEntity) //422
 			return
 		}
+		res.WriteHeader(http.StatusCreated)
 	}
 }
 
